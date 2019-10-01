@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>TODO List</title>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<link href="todo.css" rel="stylesheet">
+<script src="todo.js"></script>
+</head>
+<body>
+	<div class="container-fluid pl-0 pr-0 h-100">
+
+		<!--Navbar-->
+		<nav class="navbar navbar-fixed-top navbar-dark bg-danger">
+
+			<a class="text-monospace display-4">TODO List</a>
+			<!-- <div class="form-group">
+				<button class="btn btn-dark text-monospace display-4 shadow"
+					onclick="add_new();">Add Note</button>
+			</div> -->
+
+		</nav>
+		<!--/.Navbar-->
+
+		<div class="form-group container-fluid h-100"
+			style="background: linear-gradient(82deg, rgb(226, 226, 226) 0%, rgb(245, 245, 245) 100%);">
+			<div class="container">
+
+				<h1 class="display-4 text-center">
+					Remember The <small>Milk</small>
+				</h1>
+				<hr>
+				<div class="container-fluid row mb-5"
+					style="justify-content: center;">
+					<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+						<input id="todoTaskDetail" type="text" class="form-control"
+							placeholder="Your Task" name="task" autocomplete="off">
+					</div>
+					<button type="button"
+						class="btn btn-primary col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">Add</button>
+				</div>
+			</div>
+			<div
+				class="container col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 h-50 style-7"
+				id="todo" style="overflow-y: auto;"></div>
+		</div>
+	</div>
+	<div class="modal fade" id="errorModal" tabindex="-1" role="dialog"
+		aria-labelledby="errorModalTitle" aria-hidden="true"
+		style="display: none;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header bg-info">
+					<h5 class="modal-title" id="errorModallTitle">Oops!!!</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body text-center" id='errorModalBody'
+					style="font-size: 2rem; font-weight: initial; line-height: 1.2;"></div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
